@@ -180,6 +180,10 @@ body {
 .card footer .share .socials a {
   height: 21px;
 }
+.card footer .share .socials a:hover {
+  opacity: 65%;
+  transition: opacity 200ms;
+}
 .card footer .share .socials img {
   width: 20px;
   height: 21px;
@@ -211,6 +215,7 @@ body {
   background-color: #ecf2f8;
   color: #6d7f97;
   margin-left: auto;
+  cursor: pointer;
 }
 .card footer button svg {
   width: 15px;
