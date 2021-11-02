@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+}
+p,
+span {
+  color: #6d7f97;
+}
+html {
+  font-size: 13px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ecf2f8;
+}
+.card {
+  box-shadow: 0 10px 20px -1px rgba(158,175,194,0.3);
+  border-radius: 1rem;
+  background-color: #fff;
+  width: 325px;
+  margin: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 600px) {
+  .card {
+    flex-direction: row;
+    max-width: 730px;
+    width: auto;
+  }
+}
+.card header > img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center 29%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+@media (min-width: 600px) {
+  .card header > img {
+    width: 285px;
+    height: 100%;
+    border-top-right-radius: 0;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    object-position: left;
+  }
+}
+.card main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2.6rem;
+}
+@media (min-width: 600px) {
+  .card main {
+    padding: 0 3rem;
+  }
+}
+.card main > h1 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  color: #48556a;
+}
+@media (min-width: 600px) {
+  .card main > h1 {
+    font-size: 20px;
+  }
+}
+.card main > p {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 1rem;
+  line-height: 1.6em;
+}
+.card footer {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 1.25rem 2.6rem;
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+@media (min-width: 600px) {
+  .card footer {
+    margin-top: 0;
+    padding: 1.5rem 3rem 2.5rem;
+  }
+}
+.card footer > img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+.card footer .user-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+}
+.card footer .user-info span {
+  color: #48556a;
+  font-weight: 700;
+}
+.card footer .user-info time {
+  color: #9eafc2;
+  margin-top: 0.2rem;
+}
+.card footer .share {
+  background-color: #48556a;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+@media (min-width: 600px) {
+  .card footer .share {
+    top: -60px;
+    right: 0;
+    left: auto;
+    bottom: auto;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    box-shadow: 0 10px 10px -1px rgba(158,175,194,0.4);
+  }
+  .card footer .share:after {
+    content: '';
+    width: 0;
+    border-top: 15px solid #48556a;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    position: absolute;
+    left: calc(80% - 15px);
+    bottom: -14px;
+  }
+}
+.card footer .share > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.6rem;
+  height: 100%;
+}
+@media (min-width: 600px) {
+  .card footer .share > div {
+    padding: 1.2rem 3.1rem;
+  }
+}
+.card footer .share > div >span {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 13px;
+  color: #9eafc2;
+}
+.card footer .share .socials {
+  display: flex;
+  margin-left: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+@media (min-width: 600px) {
+  .card footer .share .socials {
+    width: 90px;
+  }
+}
+.card footer .share .socials a {
+  height: 21px;
+}
+.card footer .share .socials img {
+  width: 20px;
+  height: 21px;
+}
+.card footer .share button {
+  background-color: #6d7f97;
+  color: #fff;
+}
+@media (min-width: 600px) {
+  .card footer .share button {
+    display: none;
+  }
+}
+@media (min-width: 600px) and (min-width: 1024px) {
+  .card footer .share {
+    right: -70px;
+  }
+}
+@media (min-width: 600px) and (min-width: 1024px) {
+  .card footer .share:after {
+    left: calc(50% - 15px);
+  }
+}
+.card footer button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: #ecf2f8;
+  color: #6d7f97;
+  margin-left: auto;
+}
+.card footer button svg {
+  width: 15px;
+  height: 13px;
+}
+.card footer button:hover {
+  background-color: #6d7f97;
+  color: #fff;
+}
+.card footer button:focus {
+  background-color: #6d7f97;
+  color: #fff;
+}
+[x-cloak] {
+  display: none !important;
+}

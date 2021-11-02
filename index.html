@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Article preview component</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+</head>
+<body>
+
+<div class="card">
+    <header>
+        <img src="./images/drawers.jpg" alt="">
+    </header>
+
+    <div>
+        <main>
+            <h1>Shift the overall look and feel by adding these wonderful
+                touches to furniture in your home</h1>
+
+            <p>
+                Ever been in a room and felt like something was missing? Perhaps
+                it felt slightly bare and uninviting. I’ve got some simple tips
+                to help you make any room feel complete.
+            </p>
+
+        </main>
+
+        <footer x-data="{ open: false }">
+
+            <div class="share" x-cloak x-show="open" x-transition.opacity.duration.200ms @click.outside="open = false">
+                <div>
+                <span>Share</span>
+                    <div class="socials">
+                        <a href="#">
+                            <img src="./images/icon-facebook.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="./images/icon-twitter.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="./images/icon-pinterest.svg" alt="">
+                        </a>
+                    </div>
+
+                    <button @click="open = false">
+                        <svg>
+                            <use href="./images/icon-share.svg#icon-share"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <img src="./images/avatar-michelle.jpg" alt="">
+
+            <div class="user-info">
+                <span>Michelle Appleton</span>
+                <time>28 Jun 2020</time>
+            </div>
+
+            <button @click="open = true">
+                <svg>
+                    <use href="./images/icon-share.svg#icon-share"></use>
+                </svg>
+
+            </button>
+
+        </footer>
+    </div>
+</div>
+
+
+</body>
+</html>
